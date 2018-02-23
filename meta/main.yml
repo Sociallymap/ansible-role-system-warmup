@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Benoît Wery
+  description: Install necessary basic tools
+  company: Sociallymap
+
+  license: license (BSD)
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
+
+dependencies: []

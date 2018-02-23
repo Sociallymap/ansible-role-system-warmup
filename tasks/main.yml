@@ -1,0 +1,22 @@
+---
+- name: Update apt cache & autoremove garbage
+  apt: update_cache=yes autoremove=yes
+  become: true
+- name: Set timezone to Europe/Paris
+  when: ansible_date_time.tz != 'Europe/Paris'
+  command: timedatectl set-timezone Europe/Paris
+  become: true
+
+- name: Ensure curl is present
+  apt: name=curl state=latest
+  become: true
+- name: Ensure vim-nox is present
+  apt: name=vim-nox state=latest
+  become: true
+- name: Ensure git is present
+  apt: name=git state=latest
+  become: true
+
+- name: Copy .bash_aliases
+  copy: src=bash_aliases dest=~/.bash_aliases
+  notify: reload .bashrc

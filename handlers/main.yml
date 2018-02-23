@@ -1,0 +1,5 @@
+---
+- name: reload .bashrc
+  shell: "source ~/.bashrc"
+  args:
+    executable: /bin/bash
