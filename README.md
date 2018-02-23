@@ -1,7 +1,7 @@
 System Warmup
 =============
 
-Install necessary basic tools
+Install basic tools
 
 License
 -------
